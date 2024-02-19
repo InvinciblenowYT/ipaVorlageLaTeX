@@ -2,10 +2,21 @@
 \usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{listings}
-\usepackage{m-ch-de}
-\usepackage{minted}
 \usepackage[ngerman]{babel} 
 \usepackage{caption} % Required for customizing caption alignment
+\usepackage{codepage}
+\usepackage{minted}
+\usepackage[style=authoryear,backend=biber]{biblatex}
+\usepackage{glossaries}
+
+\makeglossaries
+
+\newglossaryentry{latex}{
+    name={Title},
+    description={esc}
+}
+
+\addbibresource{quellen.bib}
 
 \captionsetup[table]{singlelinecheck=off, justification=raggedright} % Left-align table captions
 
@@ -22,6 +33,7 @@
 
 \begin{document}
 
+
 \begin{titlepage}
     \centering
     \vspace*{2cm}
@@ -35,9 +47,8 @@
 \end{titlepage}
 
 \tableofcontents
-
-\chapter*{Arbeitsjournal}
-\addcontentsline{toc}{chapter}{Arbeitsjournal} 
+\listoffigures
+\chapter{Arbeitsjournal}
 
 \section{2024.02.15}
 
@@ -62,37 +73,39 @@
 \end{table}
 
 
-\chapter*{Bilder}
-\addcontentsline{toc}{chapter}{Bilder} 
+\chapter{Bilder}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics{swim_hires.jpeg}
+    \includegraphics{swim_hires.png}
     \caption{Ex. Image}
     \label{fig:DM}
 \end{figure}
 
-
-\chapter*{Code}
-\addcontentsline{toc}{chapter}{Code}
-
+\chapter{Code}
 
 \section{Dart:}
-\begin{minted}
-	void main() {
+\begin{minted}[fontsize=\small]{dart}
+void main() {
   print('Hello, Dart!');
 }
-\end{minted}}
-
+\end{minted}
 
 \section{PHP:}
-\begin{lstlisting}[language=PHP]
+\begin{minted}[fontsize=\small]{php}
 <?php
  echo "Hello, PHP!";
 ?>
-\end{lstlisting}
+\end{minted}
+Quelle: \cite{gugus}
+
+\section{Glossar Ex}
+\gls{latex} glossar.
+
+\printbibliography
 
 
 
+\printglossary
 
 \end{document}

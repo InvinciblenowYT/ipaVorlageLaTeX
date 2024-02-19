@@ -1,0 +1,8 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {chapter}{\numberline {1}Arbeitsjournal}{3}{}%
+\contentsline {section}{\numberline {1.1}2024.02.15}{3}{}%
+\contentsline {chapter}{\numberline {2}Bilder}{4}{}%
+\contentsline {chapter}{\numberline {3}Code}{5}{}%
+\contentsline {section}{\numberline {3.1}Dart:}{5}{}%
+\contentsline {section}{\numberline {3.2}PHP:}{5}{}%
+\contentsline {section}{\numberline {3.3}Glossar Ex}{5}{}%
