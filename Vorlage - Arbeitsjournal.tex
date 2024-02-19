@@ -1,24 +1,98 @@
 \documentclass{report}
-%\usepackage[left=2.0cm,top=0.5cm,bottom=0.5cm,right=2.0cm]{geometry}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{m-ch-de}
+\usepackage{minted}
+\usepackage[ngerman]{babel} 
+\usepackage{caption} % Required for customizing caption alignment
+
+\captionsetup[table]{singlelinecheck=off, justification=raggedright} % Left-align table captions
+
+% Redefine chapter format
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries \thechapter.\quad #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
 \begin{document}
-\begin{table}[]
-\section{Arbeitsjournal}
-\subsection{2024.02.15}
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\huge\bfseries IPA Doku Vorlage \par}
+    \vspace{1.5cm}
+    {\Large\itshape Luca Adam Jones\par}
+    \vfill
+    {\large\today\par} % Date
+    
+    \vfill
+\end{titlepage}
+
+\tableofcontents
+
+\chapter*{Arbeitsjournal}
+\addcontentsline{toc}{chapter}{Arbeitsjournal} 
+
+\section{2024.02.15}
+
+\begin{table}[htbp]
 \centering
-\begin{tabular}{|p{0.4\textwidth}|p{0.6\textwidth}|}
+\caption{Arbeitsjournal for 2024.02.15}
+\begin{tabularx}{\textwidth}{|X|X|}
  \hline
- T{\"a}tigkeiten &   \\
+ \textbf{T{\"a}tigkeiten} &   \\
  \hline
- Erreichte Ziele &   \\
+ \textbf{Erreichte Ziele} &   \\
   \hline
- Probleme &   \\
+ \textbf{Probleme} &   \\
  \hline
- Hilfestellung &  \\
+ \textbf{Hilfestellung} &  \\
  \hline
- Ausserplanm{\"a}ssige Arbeiten &   \\
+ \textbf{Ausserplanm{\"a}ssige Arbeiten} &   \\
  \hline
- Reflexion &   \\
+ \textbf{Reflexion} &   \\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{table}
+
+
+\chapter*{Bilder}
+\addcontentsline{toc}{chapter}{Bilder} 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{swim_hires.jpeg}
+    \caption{Ex. Image}
+    \label{fig:DM}
+\end{figure}
+
+
+\chapter*{Code}
+\addcontentsline{toc}{chapter}{Code}
+
+
+\section{Dart:}
+\begin{minted}
+	void main() {
+  print('Hello, Dart!');
+}
+\end{minted}}
+
+
+\section{PHP:}
+\begin{lstlisting}[language=PHP]
+<?php
+ echo "Hello, PHP!";
+?>
+\end{lstlisting}
+
+
+
+
 \end{document}
