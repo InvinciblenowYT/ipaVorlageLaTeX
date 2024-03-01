@@ -1,0 +1,5 @@
+\contentsline {chapter}{\numberline {1}Arbeitsjournal}{3}{}%
+\contentsline {section}{\numberline {1.1}2024.03.04}{3}{}%
+\contentsline {chapter}{\numberline {2}Bilder}{4}{}%
+\contentsline {chapter}{\numberline {3}Code}{5}{}%
+\contentsline {section}{\numberline {3.1}Glossar}{5}{}%

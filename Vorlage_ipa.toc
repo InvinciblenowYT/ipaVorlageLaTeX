@@ -1,8 +1,34 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{\numberline {1}Arbeitsjournal}{3}{}%
-\contentsline {section}{\numberline {1.1}2024.02.15}{3}{}%
-\contentsline {chapter}{\numberline {2}Bilder}{4}{}%
-\contentsline {chapter}{\numberline {3}Code}{5}{}%
-\contentsline {section}{\numberline {3.1}Dart:}{5}{}%
-\contentsline {section}{\numberline {3.2}PHP:}{5}{}%
-\contentsline {section}{\numberline {3.3}Glossar Ex}{5}{}%
+\contentsline {chapter}{\numberline {1}TEIL 1: UMFELD UND ABLAUF}{2}{}%
+\contentsline {section}{\numberline {1.1}Aufgabenstellung}{2}{}%
+\contentsline {section}{\numberline {1.2}Projektaufbauorganisation}{2}{}%
+\contentsline {section}{\numberline {1.3}Deklaration der benützten Firmenstandards}{2}{}%
+\contentsline {section}{\numberline {1.4}Zeitplanung}{3}{}%
+\contentsline {section}{\numberline {1.5}Arbeitsprotokoll (Journal)}{4}{}%
+\contentsline {chapter}{\numberline {2}TEIL 2: UMSETZUNG}{7}{}%
+\contentsline {section}{\numberline {2.1}Kurzfassung}{7}{}%
+\contentsline {section}{\numberline {2.2}Ausgangslage}{7}{}%
+\contentsline {section}{\numberline {2.3}Informieren}{7}{}%
+\contentsline {section}{\numberline {2.4}Planen (test erklärungen)}{7}{}%
+\contentsline {subsection}{\numberline {2.4.1}Testmethoden, Testberichte}{7}{}%
+\contentsline {subsubsection}{\numberline {2.4.1.1}Unit tests}{7}{}%
+\contentsline {subsubsection}{\numberline {2.4.1.2}E2E tests}{7}{}%
+\contentsline {subsubsection}{\numberline {2.4.1.3}Manual tests}{7}{}%
+\contentsline {section}{\numberline {2.5}Entscheiden}{7}{}%
+\contentsline {section}{\numberline {2.6}Realisieren}{7}{}%
+\contentsline {section}{\numberline {2.7}Kontrollieren}{7}{}%
+\contentsline {subsection}{\numberline {2.7.1}Testmethoden, Testberichte}{7}{}%
+\contentsline {subsubsection}{\numberline {2.7.1.1}Unit tests}{7}{}%
+\contentsline {subsubsection}{\numberline {2.7.1.2}E2E tests}{7}{}%
+\contentsline {subsubsection}{\numberline {2.7.1.3}Manual tests}{7}{}%
+\contentsline {section}{\numberline {2.8}Auswerten}{8}{}%
+\contentsline {subsection}{\numberline {2.8.1}Schlusswort}{8}{}%
+\contentsline {chapter}{\numberline {3}Bilder (EXAMPLE; REMOVE)}{9}{}%
+\contentsline {chapter}{\numberline {4}Verzeichnise}{10}{}%
+\contentsline {section}{\numberline {4.1}Glossar Ex}{10}{}%
+\contentsline {chapter}{\numberline {5}Anhang inhalt}{14}{}%
+\contentsline {section}{\numberline {5.1}Anleitung}{14}{}%
+\contentsline {section}{\numberline {5.2}Dart doc}{14}{}%
+\contentsline {section}{\numberline {5.3}PHP doc}{14}{}%
+\contentsline {section}{\numberline {5.4}Dart code}{14}{}%
+\contentsline {section}{\numberline {5.5}PHP code}{14}{}%

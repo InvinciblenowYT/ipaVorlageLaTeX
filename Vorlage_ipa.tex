@@ -3,24 +3,71 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage[ngerman]{babel} 
-\usepackage{caption} % Required for customizing caption alignment
+\usepackage{caption}
 \usepackage{codepage}
 \usepackage{minted}
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
 \usepackage[style=authoryear,backend=biber]{biblatex}
 \usepackage{glossaries}
+%\usepackage{geometry}
+\usepackage[a4paper]{geometry} % Set page dimensions to A4
+
+\usepackage{afterpage}
+\setcounter{secnumdepth}{3}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy} % Set page style to fancy
+\fancyhf{} % Clear default header
+\renewcommand{\headrulewidth}{0pt}
+
+\fancyhead[L]{Luca Adam Jones}
+\fancyhead[R]{\today}
+\fancyfoot[L]{inno}
+\fancyfoot[R]{\thepage}
+
+
+% Set the header and footer offsets to adjust proportions
+\fancyheadoffset[L]{0pt} % Set left offset for header
+\fancyheadoffset[R]{0pt plus 1fil} % Set right offset for header
+\fancyfootoffset[L]{0pt} % Set left offset for footer
+\fancyfootoffset[R]{0pt plus 1fil} % Set right offset for footer
+
+
+\fancypagestyle{plain}{
+    \fancyhead[L]{Luca Adam Jones} % Add your header
+    \fancyhead[R]{\today} % Add page number
+    \fancyfoot[L]{inno}
+	\fancyfoot[R]{\thepage}
+    \renewcommand{\headrulewidth}{0pt} % Remove header rule
+}
+\geometry{
+    top=2cm,
+    bottom=2cm,
+    left=2cm,
+    right=2cm,
+    includehead,
+    includefoot
+}
+
+
+\lstset{
+    literate={ö}{{\"o}}1
+        {ä}{{\"a}}1
+        {ü}{{\"u}}1
+}
 
 \makeglossaries
 
 \newglossaryentry{latex}{
-    name={Title},
-    description={esc}
+    name={novu AG},
+    description={Der neue Namen der Firma jkweb AG}
 }
 
 \addbibresource{quellen.bib}
 
-\captionsetup[table]{singlelinecheck=off, justification=raggedright} % Left-align table captions
+\captionsetup[table]{singlelinecheck=off, justification=raggedright}
 
-% Redefine chapter format
 \makeatletter
 \renewcommand{\@makechapterhead}[1]{%
   \vspace*{50\p@}%
@@ -33,7 +80,6 @@
 
 \begin{document}
 
-
 \begin{titlepage}
     \centering
     \vspace*{2cm}
@@ -41,23 +87,71 @@
     \vspace{1.5cm}
     {\Large\itshape Luca Adam Jones\par}
     \vfill
-    {\large\today\par} % Date
-    
+    {\large\today\par}
     \vfill
 \end{titlepage}
 
 \tableofcontents
-\listoffigures
-\chapter{Arbeitsjournal}
 
-\section{2024.02.15}
+\chapter{TEIL 1: UMFELD UND ABLAUF}
 
-\begin{table}[htbp]
-\centering
-\caption{Arbeitsjournal for 2024.02.15}
+\section{Aufgabenstellung}
+
+\section{Projektaufbauorganisation}
+
+% Insert content here
+
+\section{Deklaration der benützten Firmenstandards}
+
+% Insert content here
+
+
+\begin{landscape}
+\section{Zeitplanung}
+
+\begin{ganttchart}[
+    hgrid,
+    vgrid,
+    x unit=0.25cm, % Each unit represents 1 hour
+    y unit title=0.6cm,
+    y unit chart=0.6cm,
+    title height=1,
+    bar height=0.4,
+    title label font=\bfseries\footnotesize,
+    bar label font=\footnotesize,
+    group label font=\footnotesize\bfseries,
+    milestone label font=\footnotesize\bfseries,
+    group label node/.append style={align=left},
+    milestone label node/.append style={align=left},
+    milestone/.append style={fill=red},
+    milestone inline label node/.append style={left=5mm},
+    bar/.append style={fill=blue!30},
+    progress label text={$\displaystyle#1\%$},
+    bar incomplete/.append style={fill=red!50},
+    progress=auto,
+]{1}{80} % 10 days x 8 hours/day = 80 units
+    \gantttitle{Tag}{80} \\
+    \gantttitlelist{1,...,10}{8} \\
+   % \ganttgroup{Group 1}{1}{40} \\
+    \ganttbar[progress=50]{Planned Task 1}{1}{8} \\
+    \ganttbar[progress=70]{Planned Task 2}{9}{20} \\
+  %  \ganttgroup{Group 2}{41}{80} \\
+    \ganttbar[progress=30]{Planned Task 3}{41}{60} \\
+    \ganttbar[progress=10]{Planned Task 4}{61}{80} \\
+    \ganttbar[progress=80]{Actual Task 1}{1}{8} \\
+    \ganttbar[progress=100]{Actual Task 2}{9}{20} \\
+    \ganttbar[progress=40]{Actual Task 3}{41}{60} \\
+    \ganttbar[progress=20]{Actual Task 4}{61}{80} \\
+\end{ganttchart}
+\end{landscape}
+
+\section{Arbeitsprotokoll (Journal)}
+
+\begin{table}[ht]
+\caption{2024.03.04}
 \begin{tabularx}{\textwidth}{|X|X|}
  \hline
- \textbf{T{\"a}tigkeiten} &   \\
+ \textbf{Tätigkeiten} &   \\
  \hline
  \textbf{Erreichte Ziele} &   \\
   \hline
@@ -65,47 +159,287 @@
  \hline
  \textbf{Hilfestellung} &  \\
  \hline
- \textbf{Ausserplanm{\"a}ssige Arbeiten} &   \\
+ \textbf{Ausserplanmässige Arbeiten} &   \\
  \hline
  \textbf{Reflexion} &   \\
 \hline
 \end{tabularx}
+
 \end{table}
 
 
-\chapter{Bilder}
+\begin{table}[ht]
+\caption{2024.03.06}
+\begin{tabularx}{\textwidth}{|X|X|}
+ \hline
+ \textbf{Tätigkeiten} &   \\
+ \hline
+ \textbf{Erreichte Ziele} &   \\
+  \hline
+ \textbf{Probleme} &   \\
+ \hline
+ \textbf{Hilfestellung} &  \\
+ \hline
+ \textbf{Ausserplanmässige Arbeiten} &   \\
+ \hline
+ \textbf{Reflexion} &   \\
+\hline
+\end{tabularx}
 
-\begin{figure}[htbp]
+\end{table}
+
+\begin{table}[ht]
+\caption{2024.03.07}
+\begin{tabularx}{\textwidth}{|X|X|}
+ \hline
+ \textbf{Tätigkeiten} &   \\
+ \hline
+ \textbf{Erreichte Ziele} &   \\
+  \hline
+ \textbf{Probleme} &   \\
+ \hline
+ \textbf{Hilfestellung} &  \\
+ \hline
+ \textbf{Ausserplanmässige Arbeiten} &   \\
+ \hline
+ \textbf{Reflexion} &   \\
+\hline
+\end{tabularx}
+
+\end{table}
+
+\begin{table}[ht]
+\caption{2024.03.08}
+\begin{tabularx}{\textwidth}{|X|X|}
+ \hline
+ \textbf{Tätigkeiten} &   \\
+ \hline
+ \textbf{Erreichte Ziele} &   \\
+  \hline
+ \textbf{Probleme} &   \\
+ \hline
+ \textbf{Hilfestellung} &  \\
+ \hline
+ \textbf{Ausserplanmässige Arbeiten} &   \\
+ \hline
+ \textbf{Reflexion} &   \\
+\hline
+\end{tabularx}
+
+\end{table}
+
+\begin{table}[ht]
+\caption{2024.03.11}
+\begin{tabularx}{\textwidth}{|X|X|}
+ \hline
+ \textbf{Tätigkeiten} &   \\
+ \hline
+ \textbf{Erreichte Ziele} &   \\
+  \hline
+ \textbf{Probleme} &   \\
+ \hline
+ \textbf{Hilfestellung} &  \\
+ \hline
+ \textbf{Ausserplanmässige Arbeiten} &   \\
+ \hline
+ \textbf{Reflexion} &   \\
+\hline
+\end{tabularx}
+
+\end{table}
+
+\begin{table}[ht]
+\caption{2024.03.13}
+\begin{tabularx}{\textwidth}{|X|X|}
+ \hline
+ \textbf{Tätigkeiten} &   \\
+ \hline
+ \textbf{Erreichte Ziele} &   \\
+  \hline
+ \textbf{Probleme} &   \\
+ \hline
+ \textbf{Hilfestellung} &  \\
+ \hline
+ \textbf{Ausserplanmässige Arbeiten} &   \\
+ \hline
+ \textbf{Reflexion} &   \\
+\hline
+\end{tabularx}
+
+\end{table}
+
+\begin{table}[ht]
+\caption{2024.03.14}
+\begin{tabularx}{\textwidth}{|X|X|}
+ \hline
+ \textbf{Tätigkeiten} &   \\
+ \hline
+ \textbf{Erreichte Ziele} &   \\
+  \hline
+ \textbf{Probleme} &   \\
+ \hline
+ \textbf{Hilfestellung} &  \\
+ \hline
+ \textbf{Ausserplanmässige Arbeiten} &   \\
+ \hline
+ \textbf{Reflexion} &   \\
+\hline
+\end{tabularx}
+
+\end{table}
+
+\begin{table}[ht]
+\caption{2024.03.15}
+\begin{tabularx}{\textwidth}{|X|X|}
+ \hline
+ \textbf{Tätigkeiten} &   \\
+ \hline
+ \textbf{Erreichte Ziele} &   \\
+  \hline
+ \textbf{Probleme} &   \\
+ \hline
+ \textbf{Hilfestellung} &  \\
+ \hline
+ \textbf{Ausserplanmässige Arbeiten} &   \\
+ \hline
+ \textbf{Reflexion} &   \\
+\hline
+\end{tabularx}
+
+\end{table}
+
+\begin{table}[ht]
+\caption{2024.03.18}
+\begin{tabularx}{\textwidth}{|X|X|}
+ \hline
+ \textbf{Tätigkeiten} &   \\
+ \hline
+ \textbf{Erreichte Ziele} &   \\
+  \hline
+ \textbf{Probleme} &   \\
+ \hline
+ \textbf{Hilfestellung} &  \\
+ \hline
+ \textbf{Ausserplanmässige Arbeiten} &  \\
+ \hline
+ \textbf{Reflexion} &   \\
+\hline
+\end{tabularx}
+
+\end{table}
+
+\begin{table}[ht]
+\caption{2024.03.20}
+\begin{tabularx}{\textwidth}{|X|X|}
+ \hline
+ \textbf{Tätigkeiten} &   \\
+ \hline
+ \textbf{Erreichte Ziele} &   \\
+  \hline
+ \textbf{Probleme} &   \\
+ \hline
+ \textbf{Hilfestellung} &  \\
+ \hline
+ \textbf{Ausserplanmässige Arbeiten} &   \\
+ \hline
+ \textbf{Reflexion} &   \\
+\hline
+\end{tabularx}
+
+\end{table}
+
+\chapter{TEIL 2: UMSETZUNG}
+
+\section{Kurzfassung}
+
+% Insert content here
+
+\section{Ausgangslage}
+
+% Insert content here
+
+\section{Informieren}
+
+% Insert content here
+
+\section{Planen (test erklärungen)}
+
+\subsection{Testmethoden, Testberichte}
+
+\subsubsection{Unit tests}
+\subsubsection{E2E tests}
+\subsubsection{Manual tests}
+
+\begin{table}[htb]
+\caption{Testfall: 1}
+\begin{tabularx}{\textwidth}{|X|X|}
+ \hline
+ \textbf{Task} &   \\
+ \hline
+ \textbf{Beschreibung} &   \\
+  \hline
+ \textbf{Voraussetzung} &   \\
+ \hline
+ \textbf{Eingabe} &  \\
+ \hline
+ \textbf{Erwartetes resultat} &   \\
+\hline
+\end{tabularx}
+
+\end{table}
+
+% Insert content here
+
+\section{Entscheiden}
+
+% Insert content here
+
+\section{Realisieren}
+
+% Insert content here
+
+\section{Kontrollieren}
+
+\subsection{Testmethoden, Testberichte}
+
+\subsubsection{Unit tests}
+\subsubsection{E2E tests}
+\subsubsection{Manual tests}
+
+\textbf{Testfall: 1} \\
+Bla Bla Bla, was isch passiert, was isch richtig gsi, was falsch
+% contents, what went right, what went wrong
+
+\section{Auswerten}
+\subsection{Schlusswort}
+
+% Insert content here
+
+\chapter{Bilder (EXAMPLE; REMOVE)}
+
+\begin{figure}[htb]
     \centering
     \includegraphics{swim_hires.png}
     \caption{Ex. Image}
     \label{fig:DM}
 \end{figure}
 
-\chapter{Code}
+\chapter{Verzeichnise}
 
-\section{Dart:}
-\begin{minted}[fontsize=\small]{dart}
-void main() {
-  print('Hello, Dart!');
-}
-\end{minted}
-
-\section{PHP:}
-\begin{minted}[fontsize=\small]{php}
-<?php
- echo "Hello, PHP!";
-?>
-\end{minted}
 Quelle: \cite{gugus}
 
 \section{Glossar Ex}
 \gls{latex} glossar.
 
+\listoffigures
 \printbibliography
-
-
-
 \printglossary
+
+\chapter{Anhang inhalt}
+\section{Anleitung} %is this really necessary
+\section{Dart doc}
+\section{PHP doc}
+\section{Dart code}
+\section{PHP code}
 
 \end{document}

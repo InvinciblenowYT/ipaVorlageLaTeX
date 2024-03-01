@@ -1,0 +1,4 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is '/Users/lucajones/Documents/IPA/.texpadtmp/Vorlage_ipa.blg'
+[74] biber-darwin:340> INFO - === Fri Mar  1, 2024, 12:30:34
+[88] Biber.pm:419> INFO - Reading '/Users/lucajones/Documents/IPA/.texpadtmp/Vorlage_ipa.bcf'
